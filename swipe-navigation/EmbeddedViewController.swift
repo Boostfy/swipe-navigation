@@ -32,6 +32,6 @@ class EmbeddedViewController: UIViewController {
     weak var delegate: EmbeddedViewControllerDelegate?
     
     @IBAction private func onDone(sender: AnyObject) {
-        self.delegate?.onDone(sender)
+        self.delegate?.onDone(sender: sender)
     }
 }
