@@ -123,7 +123,7 @@ class ViewController: UIViewController, EmbeddedViewControllerDelegate, UIGestur
         }
         
         if mainPanGesture == nil {
-            mainPanGesture = UIPanGestureRecognizer(target: self, action: #selector(onPanGestureTriggered(sender:)))
+            mainPanGesture = UIPanGestureRecognizer(target: self, action: #selector(self.onPanGestureTriggered(_:)))
             view.addGestureRecognizer(mainPanGesture)
         }
         
@@ -216,7 +216,7 @@ class ViewController: UIViewController, EmbeddedViewControllerDelegate, UIGestur
         return true
     }
     
-    @IBAction @objc private func onPanGestureTriggered(sender: UIPanGestureRecognizer) {
+    @objc func onPanGestureTriggered(_ sender: UIPanGestureRecognizer) {
         switch sender.state {
         case .began:
             /* Restrict pan movement
